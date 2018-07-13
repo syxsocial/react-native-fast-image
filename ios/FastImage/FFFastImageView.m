@@ -11,6 +11,11 @@
     self = [super init];
     self.resizeMode = RCTResizeModeCover;
     self.clipsToBounds = YES;
+
+    // set filters to trilinear for better appearance when resizing
+    self.layer.minificationFilter = kCAFilterTrilinear;
+    self.layer.magnificationFilter = kCAFilterTrilinear;
+
     return self;
 }
 
